@@ -17,6 +17,14 @@ module.exports = {
       {
         test: /\.css$/,
         loader: 'style!css?sourceMap'
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel',
+        query: {
+          presets: ['es2015']
+        }
       }
     ]
   },
