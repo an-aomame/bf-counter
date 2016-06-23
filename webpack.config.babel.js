@@ -1,5 +1,6 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-module.exports = {
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+
+export default {
   entry: './scripts/index.js',
   output: {
     path: './dist',
@@ -9,7 +10,7 @@ module.exports = {
     loaders: [
       {
         test: /\.pug$/,
-        loader: 'pug-html-loader',
+        loader: 'pug-html',
         query: {
           pretty: true
         }
@@ -21,10 +22,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel',
-        query: {
-          presets: ['es2015']
-        }
+        loader: 'babel'
       }
     ]
   },
