@@ -7,6 +7,6 @@ build:
         code: npm run build
 deploy:
   steps:
-    - gh-pages:
+    - lukevivier/gh-pages:
         token: $GITHUB_TOKEN
         basedir: dist
