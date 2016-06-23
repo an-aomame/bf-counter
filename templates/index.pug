@@ -8,13 +8,10 @@ html
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/3.2.0/sanitize.min.css")
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" data-viewport-units-buggyfill="ignore")
     link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Play" data-viewport-units-buggyfill="ignore")
-  body
-    .flex-container
-      .side.side1
-        .contents
-          include main_counter.pug
-          include sub_counter.pug
-      .side.side2
-        .contents
-          include main_counter.pug
-          include sub_counter.pug
+  body.page
+    .side.side-left
+      .side_contents
+        include side.pug
+    .side.side-right
+      .side_contents
+        include side.pug

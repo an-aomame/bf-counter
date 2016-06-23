@@ -8,12 +8,12 @@ export default () => {
     const updateCnt = newCnt =>
       elCount.textContent = cnt = newCnt;
 
-    for (let btn of elCounter.getElementsByClassName('diff-btn')) {
+    for (let btn of elCounter.getElementsByClassName('diffButton')) {
       const diff = Number(btn.dataset.diff);
       btn.addEventListener('click', () => { updateCnt(cnt + diff) });
     }
 
-    for (let btn of elCounter.getElementsByClassName('reset-btn')) {
+    for (let btn of elCounter.getElementsByClassName('resetButton')) {
       btn.addEventListener('click', () => { updateCnt(defaultCnt) });
     }
   }

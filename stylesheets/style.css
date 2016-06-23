@@ -2,156 +2,178 @@
   -webkit-touch-callout: none;
   -webkit-user-select: none;
 }
-body {
+
+.count,
+.diffButton {
   font-family: "Play", sans-serif;
 }
-.main {
-  padding-bottom: 2vw;
-}
-.flex-container {
+
+.page {
+  color: #20172C;
   display: flex;
   justify-content: space-around;
   align-content: center;
 }
+
 .side {
   display: flex;
+  width: 50%;
+  min-height: 100vh;
+  padding: 1vw;
 }
-.side .contents {
+
+.side_contents {
   width: 100%;
   margin: auto;
-  padding: 1vw 1vw;
+  padding: 1vw;
+  border-radius: 1vw;
+  background-color: white;
 }
-.col-xs-4 {
+
+.side-left {
+  background-color: #E6B89C;
+}
+
+.side-right {
+  background-color: #9CAFB7;
+}
+
+.mainContainer {
+  padding-bottom: 2vw;
+}
+
+.subContainer {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.diffButton-plus {
+  background-color: #4281A4;
+}
+
+.diffButton-minus {
+  background-color: #FE938C;
+}
+
+.main_buttons {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.main_buttonCol {
   width: calc(100% / 3);
   padding: 0 1vw;
 }
-.diff-btn {
+
+.diffButton {
+  width: 100%;
+  border-style: none;
+  font-size: 5vw;
   color: white;
 }
-.sub .counter {
-  width: 50%;
-  padding: 0 1vw;
+
+.main_button {
+  padding: 10px 0;
 }
-@media (max-width: 500px) {
-  .sub .flex-container {
-    flex-direction: column;
-  }
-  .sub .counter {
-    width: 80%;
-    margin: 0 auto;
-    padding: 0 1vw;
-  }
-}
-.btn-lg {
-  padding: 10px 16px;
-}
-.sub .count {
-  font-size: 5vw;
-}
-.sub .button-group-justify {
-  display: table;
-  table-layout: fixed;
-  width: 100%;
-}
-.button-group-justify > .button-group {
-  display: table-cell;
-  vertical-align: middle;
-}
-.button-group-justify > .button-group:first-child > .button {
+
+.main_button:first-child {
   border-top-left-radius: 1.5vw;
-  border-bottom-left-radius: 1.5vw;
-}
-.button-group-justify > .button-group:last-child > .button {
   border-top-right-radius: 1.5vw;
-  border-bottom-right-radius: 1.5vw;
 }
-.button-group .button {
-  width: 100%;
+
+.main_button:last-child {
+  border-bottom-right-radius: 1.5vw;
+  border-bottom-left-radius: 1.5vw;
 }
 
 .counter {
   text-align: center;
   position: relative;
 }
-.count {
+
+.main_count {
   font-size: 20vw;
   line-height: 1.1;
 }
-.diff-btn {
-  font-size: 5vw;
-  width: 100%;
-  padding: 10px 0;
-}
-.reset-btn {
+
+.resetButton {
   font-size: 4vw;
   padding: 1vw 0.5vw;
   line-height: 1;
+  color: #EAD2AC;
+}
+
+.main_resetButton {
   position: absolute;
   left: 0;
   top: 0;
   z-index: 1;
 }
-.counter .row > div {
-  padding: 1vw;
-}
-.side {
-  width: 50%;
-  padding: 1vw;
-  min-height: 100vh;
-  color: #20172C;
-}
-.side > .contents {
-  background: white;
-  border-radius: 1vw;
-}
-.side1 {
-  background: #E6B89C;
-}
-.side2 {
-  background: #9CAFB7;
-}
-.btn {
-  border-style: none;
-}
-.btn-plus {
-  background-color: #4281A4;
-}
-.btn-minus {
-  background-color: #FE938C;
-}
-a {
-  color: #EAD2AC;
-}
-.side2 .reset-btn {
+
+.side-right .main_resetButton {
   left: auto;
   right: 0;
 }
-.counter .btn-group-vertical>.btn:first-child:not(:last-child) {
-  border-top-left-radius: 1.5vw;
-  border-top-right-radius: 1.5vw;
-}
-.counter .btn-group-vertical>.btn:last-child:not(:first-child) {
-  border-bottom-right-radius: 1.5vw;
-  border-bottom-left-radius: 1.5vw;
-}
+
 .sub {
-  margin-top: 25px;
+  width: 50%;
+  padding: 0 1vw;
 }
-.sub .diff-btn {
+
+.sub_count {
+  font-size: 5vw;
+}
+
+.sub_buttons {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.sub_buttonArea {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.sub_button {
   padding: 6px 0;
 }
-.sub .reset-btn {
-  position: static;
+
+.sub_button-left {
+  border-top-left-radius: 1.5vw;
+  border-bottom-left-radius: 1.5vw;
+}
+
+.sub_button-right {
+  border-top-right-radius: 1.5vw;
+  border-bottom-right-radius: 1.5vw;
+}
+
+@media (max-width: 500px) {
+  .subContainer {
+    flex-direction: column;
+  }
+
+  .sub {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 1vw;
+  }
 }
 
 @media (max-height: 420px) {
-  .count {
+  .main_count {
     font-size: 24vh;
   }
-  .sub .count {
+
+  .sub_count {
     font-size: 7vh;
   }
-  .diff-btn {
+
+  .diffButton {
     font-size: 7vh;
   }
 }

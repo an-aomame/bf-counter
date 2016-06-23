@@ -1,22 +1,10 @@
-.sub
-  .flex-container
-    .counter
-      .button-group-justify
-        .button-group
-          button.diff-btn.btn.button.btn-minus(data-diff="-1") -
-        .button-group
-          span.count 0
-        .button-group
-          button.diff-btn.btn.button.btn-plus(data-diff="1") +
-      a.reset-btn
-        i.fa.fa-refresh(aria-hidden="true")
-    .counter
-      .button-group-justify
-        .button-group
-          button.diff-btn.btn.button.btn-minus(data-diff="-1") -
-        .button-group
-          span.count 0
-        .button-group
-          button.diff-btn.btn.button.btn-plus(data-diff="1") +
-      a.reset-btn
-        i.fa.fa-refresh(aria-hidden="true")
+.sub.counter
+  .sub_buttons
+    .sub_buttonArea
+      button.sub_button.sub_button-left.diffButton.diffButton-minus(data-diff="-1") -
+    .sub_buttonArea
+      span.sub_count.count 0
+    .sub_buttonArea
+      button.sub_button.sub_button-right.diffButton.diffButton-plus(data-diff="1") +
+  a.sub_resetButton.resetButton
+    i.fa.fa-refresh(aria-hidden="true")
