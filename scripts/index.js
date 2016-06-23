@@ -1,3 +1,4 @@
+require('sanitize.css/sanitize.css');
 require('../stylesheets/style.css');
 
 require('viewport-units-buggyfill').init();
