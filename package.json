@@ -12,6 +12,7 @@
     "webpack": "^1.13.1"
   },
   "dependencies": {
+    "core-js": "^2.4.0",
     "fastclick": "^1.0.6",
     "sanitize.css": "^4.0.0",
     "viewport-units-buggyfill": "^0.6.0"
