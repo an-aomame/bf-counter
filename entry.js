@@ -1,6 +1,6 @@
 require('./stylesheets/style.css');
 
-window.viewportUnitsBuggyfill.init();
+require('viewport-units-buggyfill').init();
 
 jQuery(function($) {
   // control scrolling

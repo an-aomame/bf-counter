@@ -8,6 +8,9 @@
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1"
   },
+  "dependencies": {
+    "viewport-units-buggyfill": "^0.6.0"
+  },
   "scripts": {
     "build": "webpack --optimize-minimize --display-error-details"
   }
