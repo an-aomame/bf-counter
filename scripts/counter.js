@@ -9,7 +9,7 @@ export default () => {
       elCount.textContent = cnt = newCnt;
 
     Array.prototype.forEach.call(elCounter.getElementsByClassName('diffButton'), btn => {
-      const diff = Number(btn.dataset.diff);
+      const diff = Number(btn.getAttribute('data-diff'));
       btn.addEventListener('click', () => { updateCnt(cnt + diff) });
     });
 
