@@ -1,7 +1,10 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
-  entry: './scripts/index.js',
+  entry: [
+    'babel-polyfill',
+    './scripts/index.js'
+  ],
   output: {
     path: './dist',
     filename: 'bundle.js?[hash]'
