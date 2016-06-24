@@ -1,6 +1,6 @@
 // counter
 export default () => {
-  for (let elCounter of document.getElementsByClassName('counter')) {
+  Array.prototype.forEach.call(document.getElementsByClassName('counter'), elCounter => {
     const elCount = elCounter.getElementsByClassName('count')[0];
     const defaultCnt = Number(elCount.textContent);
     let cnt = defaultCnt;
@@ -8,13 +8,13 @@ export default () => {
     const updateCnt = newCnt =>
       elCount.textContent = cnt = newCnt;
 
-    for (let btn of elCounter.getElementsByClassName('diffButton')) {
+    Array.prototype.forEach.call(elCounter.getElementsByClassName('diffButton'), btn => {
       const diff = Number(btn.dataset.diff);
       btn.addEventListener('click', () => { updateCnt(cnt + diff) });
-    }
+    });
 
-    for (let btn of elCounter.getElementsByClassName('resetButton')) {
+    Array.prototype.forEach.call(elCounter.getElementsByClassName('resetButton'), btn => {
       btn.addEventListener('click', () => { updateCnt(defaultCnt) });
-    }
-  }
+    });
+  });
 };
